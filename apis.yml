@@ -1,0 +1,103 @@
+aid: toggl
+name: Toggl Track
+description: >-
+  Toggl Track is a time-tracking and productivity platform for freelancers,
+  teams, and agencies that captures billable hours, project time, and team
+  capacity across web, desktop, mobile, and browser extension clients. The
+  product offers automated tracking, calendar integration, custom reporting,
+  100+ integrations (Jira, Salesforce, Asana, GitHub), and supports billing,
+  payroll, and project profitability use cases. The Toggl Track API v9 is a
+  REST interface for time entries, workspaces, projects, clients, users, and
+  reports using HTTP Basic Authentication with an API token.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Time Tracking
+  - Productivity
+  - Project Management
+  - Billing
+  - Reporting
+  - Workforce Management
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/toggl/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: toggl:track-api-v9
+    name: Toggl Track API v9
+    description: >-
+      Current REST API for managing time entries, workspaces, projects,
+      clients, tags, tasks, users, and organizations in Toggl Track.
+      Authentication uses HTTP Basic Auth with the API token as username and
+      the literal "api_token" as password.
+    humanURL: https://engineering.toggl.com/docs/
+    baseURL: https://api.track.toggl.com/api/v9
+    tags:
+      - Time Tracking
+      - Time Entries
+      - Projects
+      - Workspaces
+      - Users
+    properties:
+      - type: Documentation
+        url: https://engineering.toggl.com/docs/
+      - type: Authentication
+        url: https://engineering.toggl.com/docs/authentication
+      - type: API Reference
+        url: https://engineering.toggl.com/docs/api/me
+  - aid: toggl:reports-api-v3
+    name: Toggl Track Reports API v3
+    description: >-
+      Reporting API for generating detailed, summary, and weekly reports across
+      time entries, with support for filtering, grouping, and export formats
+      (JSON, CSV, PDF).
+    humanURL: https://engineering.toggl.com/docs/reports_start
+    baseURL: https://api.track.toggl.com/reports/api/v3
+    tags:
+      - Reports
+      - Analytics
+      - Exports
+    properties:
+      - type: Documentation
+        url: https://engineering.toggl.com/docs/reports_start
+  - aid: toggl:webhooks-api
+    name: Toggl Track Webhooks API
+    description: >-
+      Webhooks API for subscribing to events such as time entry creation,
+      updates, deletions, and project changes within a workspace.
+    humanURL: https://engineering.toggl.com/docs/webhooks_start
+    baseURL: https://api.track.toggl.com/webhooks/api/v1
+    tags:
+      - Webhooks
+      - Events
+    properties:
+      - type: Documentation
+        url: https://engineering.toggl.com/docs/webhooks_start
+
+common:
+  - type: Website
+    url: https://toggl.com/track/
+  - type: Developer Portal
+    url: https://engineering.toggl.com/docs/
+  - type: Documentation
+    url: https://engineering.toggl.com/docs/
+  - type: Pricing
+    url: https://toggl.com/track/pricing/
+  - type: Sign Up
+    url: https://toggl.com/track/signup/
+  - type: Login
+    url: https://track.toggl.com/login
+  - type: Blog
+    url: https://toggl.com/blog/
+  - type: Support
+    url: https://support.toggl.com/en/
+  - type: Community
+    url: https://community.toggl.com/
+  - type: GitHub Organization
+    url: https://github.com/toggl
+  - type: Status
+    url: https://status.toggl.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
