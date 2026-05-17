@@ -44,7 +44,7 @@ apis:
         url: https://engineering.toggl.com/docs/
       - type: Authentication
         url: https://engineering.toggl.com/docs/authentication
-      - type: API Reference
+      - type: APIReference
         url: https://engineering.toggl.com/docs/api/me
   - aid: toggl:reports-api-v3
     name: Toggl Track Reports API v3
@@ -84,7 +84,7 @@ common:
     url: https://engineering.toggl.com/docs/
   - type: Pricing
     url: https://toggl.com/track/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://toggl.com/track/signup/
   - type: Login
     url: https://track.toggl.com/login
@@ -94,9 +94,9 @@ common:
     url: https://support.toggl.com/en/
   - type: Community
     url: https://community.toggl.com/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/toggl
-  - type: Status
+  - type: StatusPage
     url: https://status.toggl.com/
 maintainers:
   - FN: Kin Lane
