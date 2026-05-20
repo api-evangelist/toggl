@@ -76,6 +76,8 @@ apis:
         url: https://engineering.toggl.com/docs/webhooks_start
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/toggl
   - type: Website
     url: https://toggl.com/track/
   - type: Developer Portal
