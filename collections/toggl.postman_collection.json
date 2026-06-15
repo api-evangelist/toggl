@@ -1,0 +1,1008 @@
+{
+  "item": [
+    {
+      "id": "8fea07c8-9192-4a7f-bf8f-e344f0ff2c54",
+      "name": "Me",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cdc26dc9-a9cc-4ed1-88e9-e00ca229948a",
+          "name": "Get current authenticated user",
+          "request": {
+            "name": "Get current authenticated user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eac78915-442a-48d3-b15d-316ef0d60752",
+              "name": "Authenticated user profile.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "fc702103-31d6-4ace-a86a-8cc8788c1d02",
+      "name": "Time Entries",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "227d2ddf-5264-4cad-9ee6-9018e1d4464d",
+          "name": "List the authenticated user's time entries",
+          "request": {
+            "name": "List the authenticated user's time entries",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "me",
+                "time_entries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<date>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f4df73d-45da-4649-b77f-67751cd356a9",
+              "name": "Time entries for the authenticated user.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "me",
+                    "time_entries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start_date",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8888364a-9816-4fa6-9f2f-87ca59209715",
+          "name": "Get the currently running time entry",
+          "request": {
+            "name": "Get the currently running time entry",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "me",
+                "time_entries",
+                "current"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5660ed9c-df8b-4bc1-8524-6d3c9d8d3ec6",
+              "name": "Running time entry or null.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "me",
+                    "time_entries",
+                    "current"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "43b47451-ea36-439c-ba8b-ce1efe523349",
+          "name": "Create a time entry in a workspace",
+          "request": {
+            "name": "Create a time entry in a workspace",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "workspaces",
+                ":workspace_id",
+                "time_entries"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "workspace_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"start\": \"<dateTime>\",\n  \"created_with\": \"<string>\",\n  \"workspace_id\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"duration\": \"<integer>\",\n  \"project_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "abc285d0-3bca-4da6-b6b4-5191aa38d459",
+              "name": "Created time entry.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "workspaces",
+                    ":workspace_id",
+                    "time_entries"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "workspace_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"start\": \"<dateTime>\",\n  \"created_with\": \"<string>\",\n  \"workspace_id\": \"<integer>\",\n  \"description\": \"<string>\",\n  \"duration\": \"<integer>\",\n  \"project_id\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bc3c75bd-60b8-444e-9b6d-852849af4c86",
+          "name": "Update a time entry",
+          "request": {
+            "name": "Update a time entry",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "workspaces",
+                ":workspace_id",
+                "time_entries",
+                ":time_entry_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "workspace_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "time_entry_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c7750eac-e154-4cde-b200-e5d8a9f47775",
+              "name": "Updated time entry.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "workspaces",
+                    ":workspace_id",
+                    "time_entries",
+                    ":time_entry_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "workspace_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "time_entry_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0c8ff74c-d5f6-4076-a675-c07a4ee95f23",
+          "name": "Delete a time entry",
+          "request": {
+            "name": "Delete a time entry",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "workspaces",
+                ":workspace_id",
+                "time_entries",
+                ":time_entry_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "workspace_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "time_entry_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6f13d123-0399-43c1-b622-86310510acf7",
+              "name": "Deletion acknowledgement.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "workspaces",
+                    ":workspace_id",
+                    "time_entries",
+                    ":time_entry_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "workspace_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "time_entry_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8a6c36dd-3b7a-4fc2-bac3-cd0932d28bda",
+          "name": "Stop a running time entry",
+          "request": {
+            "name": "Stop a running time entry",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "workspaces",
+                ":workspace_id",
+                "time_entries",
+                ":time_entry_id",
+                "stop"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "workspace_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "time_entry_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "PATCH",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67155e96-23bc-465b-a875-f40af9e2eb1c",
+              "name": "Stopped time entry.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "workspaces",
+                    ":workspace_id",
+                    "time_entries",
+                    ":time_entry_id",
+                    "stop"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "workspace_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "time_entry_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c5a81cc9-e4e5-458c-b50a-34dc819c019d",
+      "name": "Reports",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "180da6ce-5ba9-43bb-b39f-35c116fcd606",
+          "name": "Weekly report",
+          "request": {
+            "name": "Weekly report",
+            "description": {},
+            "url": {
+              "path": [
+                "reports",
+                "api",
+                "v2",
+                "weekly"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_agent",
+                  "value": "<string>",
+                  "description": "(Required) Required identifier for the calling application."
+                },
+                {
+                  "disabled": false,
+                  "key": "workspace_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "27d33a08-2aea-4af9-b1d8-49a646e5c00b",
+              "name": "Weekly aggregated report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    "api",
+                    "v2",
+                    "weekly"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspace_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "675bcdc1-6c50-435a-be57-ca356f77e858",
+          "name": "Summary report",
+          "request": {
+            "name": "Summary report",
+            "description": {},
+            "url": {
+              "path": [
+                "reports",
+                "api",
+                "v2",
+                "summary"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_agent",
+                  "value": "<string>",
+                  "description": "(Required) Required identifier for the calling application."
+                },
+                {
+                  "disabled": false,
+                  "key": "workspace_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a3ded030-b0b3-4aaa-bba7-b56dda05e05f",
+              "name": "Summary report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    "api",
+                    "v2",
+                    "summary"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspace_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7590c49-eb8c-4b16-9264-e4c8de4dae23",
+          "name": "Detailed report",
+          "request": {
+            "name": "Detailed report",
+            "description": {},
+            "url": {
+              "path": [
+                "reports",
+                "api",
+                "v2",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_agent",
+                  "value": "<string>",
+                  "description": "(Required) Required identifier for the calling application."
+                },
+                {
+                  "disabled": false,
+                  "key": "workspace_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "11391a28-6a6a-4e93-b38b-0da1bab12808",
+              "name": "Detailed report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    "api",
+                    "v2",
+                    "details"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspace_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.track.toggl.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d45eb8b0-e65d-4768-86f4-822100143050",
+    "name": "Toggl Track API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Toggl Track time tracking platform covering the\ncore Track API (time entries, current entry, workspaces) plus the\nReports API (weekly, summary, detailed reports).\n\nAuthentication: HTTP Basic Auth where the API token is the username\nand the literal string `api_token` is the password.\n\nSources:\n- https://engineering.toggl.com/docs/\n- https://github.com/toggl/toggl_api_docs (archived reference for\n  historical paths and the Reports API)\n\n\nContact Support:\n Name: Toggl Track",
+      "type": "text/plain"
+    }
+  }
+}

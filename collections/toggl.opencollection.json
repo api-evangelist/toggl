@@ -1,0 +1,249 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Toggl Track API",
+    "version": "9"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current authenticated user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/api/v9/me"
+          },
+          "docs": "Get current authenticated user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Time Entries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List the authenticated user's time entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/api/v9/me/time_entries",
+            "params": [
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List the authenticated user's time entries"
+        },
+        {
+          "info": {
+            "name": "Get the currently running time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/api/v9/me/time_entries/current"
+          },
+          "docs": "Get the currently running time entry"
+        },
+        {
+          "info": {
+            "name": "Create a time entry in a workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.track.toggl.com/api/v9/workspaces/:workspace_id/time_entries",
+            "params": [
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a time entry in a workspace"
+        },
+        {
+          "info": {
+            "name": "Update a time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.track.toggl.com/api/v9/workspaces/:workspace_id/time_entries/:time_entry_id",
+            "params": [
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "time_entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a time entry"
+        },
+        {
+          "info": {
+            "name": "Delete a time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.track.toggl.com/api/v9/workspaces/:workspace_id/time_entries/:time_entry_id",
+            "params": [
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "time_entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a time entry"
+        },
+        {
+          "info": {
+            "name": "Stop a running time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.track.toggl.com/api/v9/workspaces/:workspace_id/time_entries/:time_entry_id/stop",
+            "params": [
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "time_entry_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Stop a running time entry"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Weekly report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/reports/api/v2/weekly",
+            "params": [
+              {
+                "name": "user_agent",
+                "value": "",
+                "type": "query",
+                "description": "Required identifier for the calling application."
+              },
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Weekly report"
+        },
+        {
+          "info": {
+            "name": "Summary report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/reports/api/v2/summary",
+            "params": [
+              {
+                "name": "user_agent",
+                "value": "",
+                "type": "query",
+                "description": "Required identifier for the calling application."
+              },
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Summary report"
+        },
+        {
+          "info": {
+            "name": "Detailed report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/reports/api/v2/details",
+            "params": [
+              {
+                "name": "user_agent",
+                "value": "",
+                "type": "query",
+                "description": "Required identifier for the calling application."
+              },
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Detailed report"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
