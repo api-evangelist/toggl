@@ -80,13 +80,13 @@ common:
     url: https://www.linkedin.com/company/toggl
   - type: Website
     url: https://toggl.com/track/
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://engineering.toggl.com/docs/
   - type: Documentation
     url: https://engineering.toggl.com/docs/
   - type: Pricing
     url: https://toggl.com/track/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://toggl.com/track/signup/
   - type: Login
     url: https://track.toggl.com/login
