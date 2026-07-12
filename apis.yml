@@ -76,6 +76,10 @@ apis:
         url: https://engineering.toggl.com/docs/webhooks_start
 
 common:
+  - type: DomainSecurity
+    url: security/toggl-domain-security.yml
+  - type: Authentication
+    url: authentication/toggl-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/toggl
   - type: Website

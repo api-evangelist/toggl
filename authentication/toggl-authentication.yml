@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/toggl-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: |-
+    HTTP Basic auth. Username is the API token from Toggl profile,
+    password is the literal string `api_token`.
+  sources:
+  - openapi/toggl-openapi.yml
