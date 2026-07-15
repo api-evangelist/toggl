@@ -76,6 +76,8 @@ apis:
         url: https://engineering.toggl.com/docs/webhooks_start
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/toggl-agentic-access.yml
   - type: DomainSecurity
     url: security/toggl-domain-security.yml
   - type: Authentication
