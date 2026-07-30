@@ -10,7 +10,19 @@ description: >-
   REST interface for time entries, workspaces, projects, clients, users, and
   reports using HTTP Basic Authentication with an API token.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/toggl.png
 tags:
   - Time Tracking
   - Productivity
@@ -24,57 +36,84 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: toggl:track-api-v9
-    name: Toggl Track API v9
-    description: >-
-      Current REST API for managing time entries, workspaces, projects,
-      clients, tags, tasks, users, and organizations in Toggl Track.
-      Authentication uses HTTP Basic Auth with the API token as username and
-      the literal "api_token" as password.
-    humanURL: https://engineering.toggl.com/docs/
-    baseURL: https://api.track.toggl.com/api/v9
-    tags:
-      - Time Tracking
-      - Time Entries
-      - Projects
-      - Workspaces
-      - Users
-    properties:
-      - type: Documentation
-        url: https://engineering.toggl.com/docs/
-      - type: Authentication
-        url: https://engineering.toggl.com/docs/authentication
-      - type: APIReference
-        url: https://engineering.toggl.com/docs/api/me
-  - aid: toggl:reports-api-v3
-    name: Toggl Track Reports API v3
-    description: >-
-      Reporting API for generating detailed, summary, and weekly reports across
-      time entries, with support for filtering, grouping, and export formats
-      (JSON, CSV, PDF).
-    humanURL: https://engineering.toggl.com/docs/reports_start
-    baseURL: https://api.track.toggl.com/reports/api/v3
-    tags:
-      - Reports
-      - Analytics
-      - Exports
-    properties:
-      - type: Documentation
-        url: https://engineering.toggl.com/docs/reports_start
-  - aid: toggl:webhooks-api
-    name: Toggl Track Webhooks API
-    description: >-
-      Webhooks API for subscribing to events such as time entry creation,
-      updates, deletions, and project changes within a workspace.
-    humanURL: https://engineering.toggl.com/docs/webhooks_start
-    baseURL: https://api.track.toggl.com/webhooks/api/v1
-    tags:
-      - Webhooks
-      - Events
-    properties:
-      - type: Documentation
-        url: https://engineering.toggl.com/docs/webhooks_start
-
+- aid: toggl:track-api-v9
+  name: Toggl Track API v9
+  description: >-
+    Current REST API for managing time entries, workspaces, projects, clients, tags, tasks, users, and
+    organizations in Toggl Track. Authentication uses HTTP Basic Auth with the API token as username and
+    the literal "api_token" as password.
+  humanURL: https://engineering.toggl.com/docs/
+  baseURL: https://api.track.toggl.com/api/v9
+  tags:
+  - Time Tracking
+  - Time Entries
+  - Projects
+  - Workspaces
+  - Users
+  properties:
+  - type: Documentation
+    url: https://engineering.toggl.com/docs/
+  - type: Authentication
+    url: https://engineering.toggl.com/docs/authentication
+  - type: APIReference
+    url: https://engineering.toggl.com/docs/api/me
+- aid: toggl:reports-api-v3
+  name: Toggl Track Reports API v3
+  description: >-
+    Reporting API for generating detailed, summary, and weekly reports across time entries, with support
+    for filtering, grouping, and export formats (JSON, CSV, PDF).
+  humanURL: https://engineering.toggl.com/docs/reports_start
+  baseURL: https://api.track.toggl.com/reports/api/v3
+  tags:
+  - Reports
+  - Analytics
+  - Exports
+  properties:
+  - type: Documentation
+    url: https://engineering.toggl.com/docs/reports_start
+- aid: toggl:webhooks-api
+  name: Toggl Track Webhooks API
+  description: >-
+    Webhooks API for subscribing to events such as time entry creation, updates, deletions, and project
+    changes within a workspace.
+  humanURL: https://engineering.toggl.com/docs/webhooks_start
+  baseURL: https://api.track.toggl.com/webhooks/api/v1
+  tags:
+  - Webhooks
+  - Events
+  properties:
+  - type: Documentation
+    url: https://engineering.toggl.com/docs/webhooks_start
+- aid: toggl:toggl-me-api
+  name: Toggl Track Me API
+  description: The Me API from Toggl Track — 1 operation(s) for me.
+  humanURL: https://engineering.toggl.com/docs/
+  baseURL: https://api.track.toggl.com/api/v9
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/toggl-me-api-openapi.yml
+- aid: toggl:toggl-reports-api
+  name: Toggl Track Reports API
+  description: The Reports API from Toggl Track — 3 operation(s) for reports.
+  humanURL: https://engineering.toggl.com/docs/
+  baseURL: https://api.track.toggl.com/api/v9
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/toggl-reports-api-openapi.yml
+- aid: toggl:toggl-time-entries-api
+  name: Toggl Track Time Entries API
+  description: The Time Entries API from Toggl Track — 5 operation(s) for time entries.
+  humanURL: https://engineering.toggl.com/docs/
+  baseURL: https://api.track.toggl.com/api/v9
+  tags:
+  - Time Entries
+  properties:
+  - type: OpenAPI
+    url: openapi/toggl-time-entries-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/toggl-agentic-access.yml
