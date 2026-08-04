@@ -1,0 +1,179 @@
+openapi: 3.1.0
+info:
+  title: Toggl Track API
+  version: "9"
+  description: |
+    REST API for the Toggl Track time tracking platform covering the
+    core Track API (time entries, current entry, workspaces) plus the
+    Reports API (weekly, summary, detailed reports).
+
+    Authentication: HTTP Basic Auth where the API token is the username
+    and the literal string `api_token` is the password.
+
+    Sources:
+    - https://engineering.toggl.com/docs/
+    - https://github.com/toggl/toggl_api_docs (archived reference for
+      historical paths and the Reports API)
+  contact:
+    name: Toggl Track
+    url: https://engineering.toggl.com/docs/
+servers:
+  - url: https://api.track.toggl.com
+    description: Toggl Track production API host
+security:
+  - basicAuth: []
+tags:
+  - name: Me
+  - name: Time Entries
+  - name: Reports
+paths:
+  /api/v9/me:
+    get:
+      tags: [Me]
+      summary: Get current authenticated user
+      operationId: getMe
+      responses:
+        "200":
+          description: Authenticated user profile.
+  /api/v9/me/time_entries:
+    get:
+      tags: [Time Entries]
+      summary: List the authenticated user's time entries
+      operationId: listMyTimeEntries
+      parameters:
+        - in: query
+          name: start_date
+          schema: { type: string, format: date }
+        - in: query
+          name: end_date
+          schema: { type: string, format: date }
+      responses:
+        "200":
+          description: Time entries for the authenticated user.
+  /api/v9/me/time_entries/current:
+    get:
+      tags: [Time Entries]
+      summary: Get the currently running time entry
+      operationId: getCurrentTimeEntry
+      responses:
+        "200":
+          description: Running time entry or null.
+  /api/v9/workspaces/{workspace_id}/time_entries:
+    post:
+      tags: [Time Entries]
+      summary: Create a time entry in a workspace
+      operationId: createTimeEntry
+      parameters:
+        - $ref: "#/components/parameters/WorkspaceId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                description: { type: string }
+                start: { type: string, format: date-time }
+                duration: { type: integer }
+                project_id: { type: integer }
+                created_with: { type: string }
+                workspace_id: { type: integer }
+              required: [start, created_with, workspace_id]
+      responses:
+        "200":
+          description: Created time entry.
+  /api/v9/workspaces/{workspace_id}/time_entries/{time_entry_id}:
+    put:
+      tags: [Time Entries]
+      summary: Update a time entry
+      operationId: updateTimeEntry
+      parameters:
+        - $ref: "#/components/parameters/WorkspaceId"
+        - $ref: "#/components/parameters/TimeEntryId"
+      responses:
+        "200":
+          description: Updated time entry.
+    delete:
+      tags: [Time Entries]
+      summary: Delete a time entry
+      operationId: deleteTimeEntry
+      parameters:
+        - $ref: "#/components/parameters/WorkspaceId"
+        - $ref: "#/components/parameters/TimeEntryId"
+      responses:
+        "200":
+          description: Deletion acknowledgement.
+  /api/v9/workspaces/{workspace_id}/time_entries/{time_entry_id}/stop:
+    patch:
+      tags: [Time Entries]
+      summary: Stop a running time entry
+      operationId: stopTimeEntry
+      parameters:
+        - $ref: "#/components/parameters/WorkspaceId"
+        - $ref: "#/components/parameters/TimeEntryId"
+      responses:
+        "200":
+          description: Stopped time entry.
+  /reports/api/v2/weekly:
+    get:
+      tags: [Reports]
+      summary: Weekly report
+      operationId: weeklyReport
+      parameters:
+        - $ref: "#/components/parameters/UserAgent"
+        - $ref: "#/components/parameters/WorkspaceIdQuery"
+      responses:
+        "200":
+          description: Weekly aggregated report.
+  /reports/api/v2/summary:
+    get:
+      tags: [Reports]
+      summary: Summary report
+      operationId: summaryReport
+      parameters:
+        - $ref: "#/components/parameters/UserAgent"
+        - $ref: "#/components/parameters/WorkspaceIdQuery"
+      responses:
+        "200":
+          description: Summary report.
+  /reports/api/v2/details:
+    get:
+      tags: [Reports]
+      summary: Detailed report
+      operationId: detailedReport
+      parameters:
+        - $ref: "#/components/parameters/UserAgent"
+        - $ref: "#/components/parameters/WorkspaceIdQuery"
+      responses:
+        "200":
+          description: Detailed report.
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: |
+        HTTP Basic auth. Username is the API token from Toggl profile,
+        password is the literal string `api_token`.
+  parameters:
+    WorkspaceId:
+      in: path
+      name: workspace_id
+      required: true
+      schema: { type: integer }
+    TimeEntryId:
+      in: path
+      name: time_entry_id
+      required: true
+      schema: { type: integer }
+    UserAgent:
+      in: query
+      name: user_agent
+      required: true
+      schema: { type: string }
+      description: Required identifier for the calling application.
+    WorkspaceIdQuery:
+      in: query
+      name: workspace_id
+      required: true
+      schema: { type: integer }

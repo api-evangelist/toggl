@@ -1,0 +1,18 @@
+{
+  "provider": "toggl",
+  "sources": [
+    "toggl-me-api-openapi.yml",
+    "toggl-reports-api-openapi.yml",
+    "toggl-time-entries-api-openapi.yml"
+  ],
+  "outputs": [
+    "toggl-me-api-openapi.yml",
+    "toggl-reports-api-openapi.yml",
+    "toggl-time-entries-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
