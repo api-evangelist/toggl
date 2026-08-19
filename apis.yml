@@ -34,7 +34,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/toggl/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: toggl:track-api-v9
   name: Toggl Track API v9
