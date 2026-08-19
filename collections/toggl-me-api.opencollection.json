@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Toggl Track Me API",
+    "version": "9"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get current authenticated user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/api/v9/me"
+          },
+          "docs": "Get current authenticated user"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,97 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Toggl Track Me Reports API",
+    "version": "9"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Weekly report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/reports/api/v2/weekly",
+            "params": [
+              {
+                "name": "user_agent",
+                "value": "",
+                "type": "query",
+                "description": "Required identifier for the calling application."
+              },
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Weekly report"
+        },
+        {
+          "info": {
+            "name": "Summary report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/reports/api/v2/summary",
+            "params": [
+              {
+                "name": "user_agent",
+                "value": "",
+                "type": "query",
+                "description": "Required identifier for the calling application."
+              },
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Summary report"
+        },
+        {
+          "info": {
+            "name": "Detailed report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.track.toggl.com/reports/api/v2/details",
+            "params": [
+              {
+                "name": "user_agent",
+                "value": "",
+                "type": "query",
+                "description": "Required identifier for the calling application."
+              },
+              {
+                "name": "workspace_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Detailed report"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

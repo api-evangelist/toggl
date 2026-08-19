@@ -1,0 +1,114 @@
+{
+  "item": [
+    {
+      "id": "9625ced5-b136-4c8b-a2f4-bac0347ca579",
+      "name": "Me",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "97e6518d-9e4e-41db-9ea9-423b983a9ed0",
+          "name": "Get current authenticated user",
+          "request": {
+            "name": "Get current authenticated user",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v9",
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3ed5f526-d9b5-41b7-8bc9-0a506133c584",
+              "name": "Authenticated user profile.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v9",
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.track.toggl.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "66d061ae-4749-4f68-84a0-8e0703f81890",
+    "name": "Toggl Track Me API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Toggl Track time tracking platform covering the\ncore Track API (time entries, current entry, workspaces) plus the\nReports API (weekly, summary, detailed reports).\n\nAuthentication: HTTP Basic Auth where the API token is the username\nand the literal string `api_token` is the password.\n\nSources:\n- https://engineering.toggl.com/docs/\n- https://github.com/toggl/toggl_api_docs (archived reference for\n  historical paths and the Reports API)\n\n\nContact Support:\n Name: Toggl Track",
+      "type": "text/plain"
+    }
+  }
+}

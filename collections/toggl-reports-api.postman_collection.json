@@ -1,0 +1,324 @@
+{
+  "item": [
+    {
+      "id": "8d9632ce-7550-4e48-9c3a-e8ecc103a545",
+      "name": "Reports",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "57a5259a-d3c7-4085-af14-d0c5abf4f9ab",
+          "name": "Weekly report",
+          "request": {
+            "name": "Weekly report",
+            "description": {},
+            "url": {
+              "path": [
+                "reports",
+                "api",
+                "v2",
+                "weekly"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_agent",
+                  "value": "<string>",
+                  "description": "(Required) Required identifier for the calling application."
+                },
+                {
+                  "disabled": false,
+                  "key": "workspace_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2367e74b-ac0f-4138-b703-3c5d025f2e3a",
+              "name": "Weekly aggregated report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    "api",
+                    "v2",
+                    "weekly"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspace_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e2cfc00-452f-469a-89d9-98f84189291c",
+          "name": "Summary report",
+          "request": {
+            "name": "Summary report",
+            "description": {},
+            "url": {
+              "path": [
+                "reports",
+                "api",
+                "v2",
+                "summary"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_agent",
+                  "value": "<string>",
+                  "description": "(Required) Required identifier for the calling application."
+                },
+                {
+                  "disabled": false,
+                  "key": "workspace_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67963d72-55ce-45c9-b593-7ddf507b995c",
+              "name": "Summary report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    "api",
+                    "v2",
+                    "summary"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspace_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "644c3e9c-16a7-4ccd-b810-5abe81e7db18",
+          "name": "Detailed report",
+          "request": {
+            "name": "Detailed report",
+            "description": {},
+            "url": {
+              "path": [
+                "reports",
+                "api",
+                "v2",
+                "details"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user_agent",
+                  "value": "<string>",
+                  "description": "(Required) Required identifier for the calling application."
+                },
+                {
+                  "disabled": false,
+                  "key": "workspace_id",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d5576aa7-31b8-4d13-b5c8-310d5a7ded92",
+              "name": "Detailed report.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reports",
+                    "api",
+                    "v2",
+                    "details"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user_agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "workspace_id",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.track.toggl.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "22443a8e-e739-48af-8d52-c1b7177f2751",
+    "name": "Toggl Track Me Reports API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Toggl Track time tracking platform covering the\ncore Track API (time entries, current entry, workspaces) plus the\nReports API (weekly, summary, detailed reports).\n\nAuthentication: HTTP Basic Auth where the API token is the username\nand the literal string `api_token` is the password.\n\nSources:\n- https://engineering.toggl.com/docs/\n- https://github.com/toggl/toggl_api_docs (archived reference for\n  historical paths and the Reports API)\n\n\nContact Support:\n Name: Toggl Track",
+      "type": "text/plain"
+    }
+  }
+}
