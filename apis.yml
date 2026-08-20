@@ -47,6 +47,12 @@ apis:
   tags:
   - Time Tracking
   - Time Entries
+  - Project
+  - Workspaces
+  - User
+  tags_raw:
+  - Time Tracking
+  - Time Entries
   - Projects
   - Workspaces
   - Users
@@ -67,6 +73,10 @@ apis:
   tags:
   - Reports
   - Analytics
+  - Export
+  tags_raw:
+  - Reports
+  - Analytics
   - Exports
   properties:
   - type: Documentation
@@ -79,6 +89,9 @@ apis:
   humanURL: https://engineering.toggl.com/docs/webhooks_start
   baseURL: https://api.track.toggl.com/webhooks/api/v1
   tags:
+  - Webhook
+  - Event
+  tags_raw:
   - Webhooks
   - Events
   properties:
