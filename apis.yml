@@ -61,7 +61,7 @@ apis:
   - Time Tracking
   - Time Entries
   - Project
-  - Workspaces
+  - Workspace
   - User
   tags_raw:
   - Time Tracking
