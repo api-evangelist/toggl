@@ -1,9 +1,7 @@
 {
   "provider": "toggl",
   "sources": [
-    "toggl-me-api-openapi.yml",
-    "toggl-reports-api-openapi.yml",
-    "toggl-time-entries-api-openapi.yml"
+    "_original/toggl-openapi.yml"
   ],
   "outputs": [
     "toggl-me-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "toggl-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "toggl-me-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "toggl-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "toggl-time-entries-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

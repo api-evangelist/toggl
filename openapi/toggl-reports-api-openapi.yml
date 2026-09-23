@@ -1,8 +1,26 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Toggl Track Me Reports API
+  title: Toggl Track Reports API
   version: '9'
-  description: "REST API for the Toggl Track time tracking platform covering the\ncore Track API (time entries, current entry, workspaces) plus the\nReports API (weekly, summary, detailed reports).\n\nAuthentication: HTTP Basic Auth where the API token is the username\nand the literal string `api_token` is the password.\n\nSources:\n- https://engineering.toggl.com/docs/\n- https://github.com/toggl/toggl_api_docs (archived reference for\n  historical paths and the Reports API)\n"
+  description: 'REST API for the Toggl Track time tracking platform covering the
+
+    core Track API (time entries, current entry, workspaces) plus the
+
+    Reports API (weekly, summary, detailed reports).
+
+
+    Authentication: HTTP Basic Auth where the API token is the username
+
+    and the literal string `api_token` is the password.
+
+
+    Sources:
+
+    - https://engineering.toggl.com/docs/
+
+    - https://github.com/toggl/toggl_api_docs (archived reference for
+
+    historical paths and the Reports API)'
   contact:
     name: Toggl Track
     url: https://engineering.toggl.com/docs/
