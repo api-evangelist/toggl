@@ -133,15 +133,15 @@ paths:
           description: Stopped time entry.
 components:
   parameters:
-    WorkspaceId:
-      in: path
-      name: workspace_id
-      required: true
-      schema:
-        type: integer
     TimeEntryId:
       in: path
       name: time_entry_id
+      required: true
+      schema:
+        type: integer
+    WorkspaceId:
+      in: path
+      name: workspace_id
       required: true
       schema:
         type: integer
