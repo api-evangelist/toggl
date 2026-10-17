@@ -70,12 +70,6 @@ paths:
           description: Detailed report.
 components:
   parameters:
-    WorkspaceIdQuery:
-      in: query
-      name: workspace_id
-      required: true
-      schema:
-        type: integer
     UserAgent:
       in: query
       name: user_agent
@@ -83,6 +77,12 @@ components:
       schema:
         type: string
       description: Required identifier for the calling application.
+    WorkspaceIdQuery:
+      in: query
+      name: workspace_id
+      required: true
+      schema:
+        type: integer
   securitySchemes:
     basicAuth:
       type: http
