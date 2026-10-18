@@ -133,7 +133,7 @@
     - alpha
     in_cloud: true
     builder: unknown (community connector; contributor not in the record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: toggl-fivetran
   label: Fivetran
@@ -159,7 +159,7 @@
     - connectors/applications/toggl-track
     vendor_link: https://toggl.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: toggl-meltano
   label: Meltano
@@ -193,7 +193,7 @@
     - silver
     - unknown
     builder: 'community (Meltano Hub variant maintainers: airbyte, lambtron, singer-io)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: toggl-slack-own
   label: Slack (own)
