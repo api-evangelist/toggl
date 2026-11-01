@@ -1,4 +1,4 @@
-# Toggl Track (toggl)
+# Toggl Track
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,104 +66,108 @@
 
 Toggl Track is a time-tracking and productivity platform for freelancers, teams, and agencies that captures billable hours, project time, and team capacity across web, desktop, mobile, and browser extension clients. The product offers automated tracking, calendar integration, custom reporting, 100+ integrations (Jira, Salesforce, Asana, GitHub), and supports billing, payroll, and project profitability use cases. The Toggl Track API v9 is a REST interface for time entries, workspaces, projects, clients, users, and reports using HTTP Basic Authentication with an API token.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/toggl/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/toggl/refs/heads/main/apis.yml)
+**Areas:** Time Tracking · Productivity · Project Management · Billing · Reporting · Workforce Management
 
-## Scope
+## Toggl Track on APIs.io
 
-- **Type:** Index
+Everything profiled for Toggl Track is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/toggl/](https://apis.io/providers/toggl/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (6)
 
-- Time Tracking
-- Productivity
-- Project Management
-- Billing
-- Reporting
-- Workforce Management
+- [Toggl Track API v9](https://apis.io/apis/toggl/track-api-v9/) — Current REST API for managing time entries, workspaces, projects, clients, tags, tasks, users, and organizations in Toggl Track. Authentication uses HTTP…
+- [Toggl Track Reports API v3](https://apis.io/apis/toggl/reports-api-v3/) — Reporting API for generating detailed, summary, and weekly reports across time entries, with support for filtering, grouping, and export formats (JSON, CSV,…
+- [Toggl Track Webhooks API](https://apis.io/apis/toggl/webhooks-api/) — Webhooks API for subscribing to events such as time entry creation, updates, deletions, and project changes within a workspace.
+- [Toggl Track Me API](https://apis.io/apis/toggl/toggl-me-api/) — The Me API from Toggl Track — 1 operation(s) for me.
+- [Toggl Track Reports API](https://apis.io/apis/toggl/toggl-reports-api/) — The Reports API from Toggl Track — 3 operation(s) for reports.
+- [Toggl Track Time Entries API](https://apis.io/apis/toggl/toggl-time-entries-api/) — The Time Entries API from Toggl Track — 5 operation(s) for time entries.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Toggl Track API v9
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Current REST API for managing time entries, workspaces, projects, clients, tags, tasks, users, and organizations in Toggl Track. Authentication uses HTTP Basic Auth with the API token as username and the literal "api_token" as password.
+- [Toggl Agentic Access](https://apis.io/agentic-access/toggl/toggl-agentic-access/)
 
-- **Human URL:** [https://engineering.toggl.com/docs/](https://engineering.toggl.com/docs/)
-- **Base URL:** `https://api.track.toggl.com/api/v9`
+#### Collections (4)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Time Tracking
-- Time Entries
-- Projects
-- Workspaces
-- Users
+- [Toggl Track API](https://apis.io/collections/toggl/open-toggl/)
+- [Toggl Track Me API](https://apis.io/collections/toggl/open-toggl-me-api/)
+- [Toggl Track Me Reports API](https://apis.io/collections/toggl/open-toggl-reports-api/)
+- [Toggl Track Me Time Entries API](https://apis.io/collections/toggl/open-toggl-time-entries-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://engineering.toggl.com/docs/)
-- [Authentication](https://engineering.toggl.com/docs/authentication)
-- [API Reference](https://engineering.toggl.com/docs/api/me)
-- [Postman Collection](collections/toggl.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/toggl.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Toggl Track Reports API v3
+- [Toggl Authentication](https://apis.io/security/toggl/toggl-authentication/)
+- [Toggl Domain Security](https://apis.io/security/toggl/toggl-domain-security/)
 
-Reporting API for generating detailed, summary, and weekly reports across time entries, with support for filtering, grouping, and export formats (JSON, CSV, PDF).
+## Where to find this API
 
-- **Human URL:** [https://engineering.toggl.com/docs/reports_start](https://engineering.toggl.com/docs/reports_start)
-- **Base URL:** `https://api.track.toggl.com/reports/api/v3`
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Reports
-- Analytics
-- Exports
-
-#### Properties
-
-- [Documentation](https://engineering.toggl.com/docs/reports_start)
-- [Postman Collection](collections/toggl.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/toggl.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Toggl Track Webhooks API
-
-Webhooks API for subscribing to events such as time entry creation, updates, deletions, and project changes within a workspace.
-
-- **Human URL:** [https://engineering.toggl.com/docs/webhooks_start](https://engineering.toggl.com/docs/webhooks_start)
-- **Base URL:** `https://api.track.toggl.com/webhooks/api/v1`
-
-#### Tags
-
-- Webhooks
-- Events
-
-#### Properties
-
-- [Documentation](https://engineering.toggl.com/docs/webhooks_start)
-- [Postman Collection](collections/toggl.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/toggl.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/toggl)
 - [Website](https://toggl.com/track/)
-- [Developer  Portal](https://engineering.toggl.com/docs/)
 - [Documentation](https://engineering.toggl.com/docs/)
 - [Pricing](https://toggl.com/track/pricing/)
-- [Sign Up](https://toggl.com/track/signup/)
-- [Login](https://track.toggl.com/login)
-- [Blog](https://toggl.com/blog/)
 - [Support](https://support.toggl.com/en/)
-- [Community](https://community.toggl.com/)
-- [GitHub Organization](https://github.com/toggl)
-- [Status Page](https://status.toggl.com/)
+- [Blog](https://toggl.com/blog/)
+- [GitHub](https://github.com/toggl)
+- [Status](https://status.toggl.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 17.1 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/toggl/](https://apis.io/providers/toggl/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Toggl Track: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/toggl/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
